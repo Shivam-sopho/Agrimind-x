@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Button, View, Text } from 'react-native';
-import Constants from 'expo-constants';
+import { API_BASE_URL } from '@env';
 
 export default function HomeScreen() {
   const [message, setMessage] = useState('');
@@ -9,10 +9,8 @@ export default function HomeScreen() {
   const fetchHello = async () => {
     setLoading(true);
     try {
-      const apiBaseUrl =
-        Constants.expoConfig?.extra?.API_BASE_URL ||
-        Constants.manifest?.extra?.API_BASE_URL ||
-        'http://192.168.1.4:8000';
+      console.log(API_BASE_URL);
+      const apiBaseUrl = API_BASE_URL || 'https://agrimind-x.onrender.com';
       const res = await fetch(`${apiBaseUrl}/`);
       const data = await res.json();
       setMessage(data.msg);

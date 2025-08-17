@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "agrimind-frontend",
+    "name": "Agrimind-X",
     "slug": "agrimind-frontend",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -41,10 +41,10 @@
     },
     "extra": {
       "router": {},
+      "API_BASE_URL": "https://agrimind-x.onrender.com",
       "eas": {
         "projectId": "b71dc038-1278-44db-93be-3db200d2397a"
-      },
-      "API_BASE_URL": "https://agrimind-x.onrender.com"
+      }
     },
     "owner": "chotukv"
   }
