@@ -1,9 +1,13 @@
-Got it ✅ — here’s a **comprehensive README** you can drop directly into your project root (`agrimind-x/README.md`).
-It’s structured to impress hackathon judges **and** help your team get started quickly.
+# 🌾 AgriMind-X — Multimodal Multi-Agent AI for Next-Gen Agriculture
 
 ---
 
-# 🌾 AgriMind-X — Multimodal Multi-Agent AI for Next-Gen Agriculture
+## 📱 Download the Latest APK
+
+**Try the AgriMind-X mobile app:**
+[Download APK from Expo](https://expo.dev/accounts/chotukv/projects/agrimind-x/builds/34727251-ebbe-4920-8013-3ca1ca8f661f)
+
+---
 
 AgriMind-X is a **multimodal, multi-agent AI platform** designed to autonomously manage key aspects of agriculture: irrigation, crop health, financial access, market forecasting, and sustainability tracking.
 
@@ -13,15 +17,6 @@ It is built as a **hackathon-ready starter kit** with:
 * **React Native frontend skeleton** (mobile-first, farmer-friendly UI)
 * **Sample agricultural datasets** (soil moisture, market prices, weather, subsidy docs)
 * **Mermaid diagrams** (system architecture, UX flow, impact visualization)
-
-This project is optimized to meet **Capital One Hackathon judging criteria**:
-
-* **Innovation** (multi-agent + multimodal)
-* **Finance Integration** (OCR + auto-loans/subsidies)
-* **Accuracy & Feasibility** (mock models with real datasets)
-* **Hyperlocal Solutions** (tuned for paddy in Assam as example)
-* **AI Alignment** (consent, explainability, overrides)
-
 ---
 
 ## 🚀 Features
@@ -86,16 +81,29 @@ cd backend
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+# Copy .env.example to .env and fill in your API keys (Cloudinary, OpenWeather, etc.)
 uvicorn app.main:app --reload --port 8000
 ```
 
 API will be live at: **[http://localhost:8000/docs](http://localhost:8000/docs)**
 
-### Frontend (React Native)
+### Frontend (React Native/Expo)
 
-* Scaffold with Expo or RN CLI.
-* Copy `frontend/` files into your project.
-* Set `API_BASE` to your backend URL.
+```bash
+cd agrimind-x/agrimind-x
+npm install
+npx expo start
+```
+- The app will use the production backend at https://agrimind-x.onrender.com/ by default.
+- To use a local backend, change the API URL in `app/(tabs)/explore.tsx`.
+
+### Build APK (Expo EAS)
+
+```bash
+cd agrimind-x/agrimind-x
+npx eas build --platform android --profile production
+```
+- The APK will connect to the production backend.
 
 ### Docker (optional)
 
@@ -175,13 +183,3 @@ docker-compose up --build
 MIT — free to use and extend.
 
 ---
-
-👉 This README is crafted to **guide your hackathon demo AND impress the judges** by clearly showing innovation, feasibility, and scalability.
-
-Do you want me to also write a **shorter README.md for the frontend only**, so the React Native part looks polished too?
-
-
-
-  npx create-expo-app totally-new-project
-  cd totally-new-project
-  eas init
