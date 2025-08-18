@@ -189,3 +189,46 @@ docker-compose up --build
 MIT — free to use and extend.
 
 ---
+
+## 🗝️ Environment Variables (.env)
+
+The backend requires the following environment variables in a `.env` file (see `.env.example`):
+
+- `CLOUDINARY_CLOUD_NAME` — Your Cloudinary cloud name (for image/audio upload)
+- `CLOUDINARY_API_KEY` — Your Cloudinary API key
+- `CLOUDINARY_API_SECRET` — Your Cloudinary API secret
+- `CLOUDINARY_URL` — (Optional) Full Cloudinary URL for SDKs
+- `OPENROUTER_API_KEY` — API key for OpenRouter (LLM access)
+- `OPENWEATHER_API_KEY` — API key for OpenWeatherMap (weather data)
+
+**How to set up:**
+1. Copy `.env.example` to `.env` in the `backend/` directory.
+2. Fill in your API keys as provided by Cloudinary, OpenRouter, and OpenWeatherMap.
+3. Restart your backend server after editing `.env`.
+
+---
+
+## 🔑 How to Get API Keys
+
+**Cloudinary**
+- Go to https://cloudinary.com/ and sign up for a free account.
+- After verifying your email, go to the Cloudinary Dashboard.
+- Copy your `cloud_name`, `API Key`, and `API Secret` from the dashboard.
+
+**OpenRouter**
+- Go to https://openrouter.ai/ and sign up or log in.
+- Navigate to the API Keys section in your account dashboard.
+- Click “Create API Key” and copy the generated key.
+- If you see “Unlimited” quota, you can use this key for all LLM requests.
+
+**OpenWeatherMap**
+- Go to https://openweathermap.org/ and create a free account.
+- After verifying your email, go to the API keys section in your profile.
+- Click “Create key” and copy the generated key.
+
+**Setup Steps:**
+1. Copy `.env.example` to `.env` in the `backend/` directory.
+2. Paste your keys into the corresponding variables.
+3. Restart your backend server after editing `.env`.
+
+---
