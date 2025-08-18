@@ -12,10 +12,7 @@
       "distribution": "internal"
     },
     "production": {
-      "autoIncrement": true,
-      "env": {
-        "API_BASE_URL": "https://agrimind-x.onrender.com"
-      }
+      "autoIncrement": true
     }
   },
   "submit": {
