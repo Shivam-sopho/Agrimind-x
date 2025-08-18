@@ -33,6 +33,7 @@ This project is optimized to meet **Capital One Hackathon judging criteria**:
 * **FinanceFlow** → Extracts data from subsidy/loan forms via OCR & auto-fills applications.
 * **MarketBrain** → Predicts market trends and suggests “Sell/Hold” actions.
 * **EcoTrack** → Estimates water savings & carbon footprint from AI-driven actions.
+SoilSense Agent – Monitors soil health & advises on fertilization
 
 ### 🧠 Multimodality
 
@@ -178,3 +179,9 @@ MIT — free to use and extend.
 👉 This README is crafted to **guide your hackathon demo AND impress the judges** by clearly showing innovation, feasibility, and scalability.
 
 Do you want me to also write a **shorter README.md for the frontend only**, so the React Native part looks polished too?
+
+
+
+  npx create-expo-app totally-new-project
+  cd totally-new-project
+  eas init
