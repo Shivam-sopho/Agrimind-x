@@ -40,6 +40,12 @@ SoilSense Agent – Monitors soil health & advises on fertilization
 
 ---
 
+## 🏗️ Architecture Diagram
+
+![AgriMind-X Architecture](docs/diagrams/Architecture.png)
+
+---
+
 ## 📂 Project Structure
 
 ```
