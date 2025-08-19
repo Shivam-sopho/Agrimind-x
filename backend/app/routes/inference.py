@@ -34,7 +34,7 @@ def call_llm_api(prompt: str) -> str:
     url = "https://openrouter.ai/api/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer {api_key}",
-        "HTTP-Referer": "https://agrimind-x.com",
+        "HTTP-Referer": "https://agrimind-x.onrender.com",
         "X-Title": "AgriMind-X MVP"
     }
     system_prompt = (
@@ -69,13 +69,14 @@ def call_gemma_image_llm(image_b64: str, user_prompt: str) -> str:
     url = "https://openrouter.ai/api/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer {api_key}",
-        "HTTP-Referer": "https://agrimind-x.com",
+        "HTTP-Referer": "https://agrimind-x.onrender.com",
         "X-Title": "AgriMind-X MVP"
     }
     system_prompt = (
         "You are a world-class expert in crop disease and soil health. "
         "Analyze the uploaded image and provide a diagnosis and actionable advice for Indian farmers."
     )
+    print(image_b64)
     data = {
         "model": "google/gemma-3-27b-it:free",
         "messages": [
