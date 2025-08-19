@@ -78,10 +78,27 @@ def call_gemma_image_llm(image_b64: str, user_prompt: str) -> str:
     )
     print(image_b64)
     data = {
-        "model": "google/gemma-3-27b-it:free",
+        "model": "mistralai/mistral-small-3.2-24b-instruct:free",
         "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt, "image": image_b64}
+                  {
+        "role": "system",
+        "content": "You are a world-class expert in crop disease and soil health. Analyze the uploaded image and provide a diagnosis and actionable advice for Indian farmers."
+      },
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": user_prompt
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": image_b64
+                        }
+                    }
+                ]
+            }
         ]
     }
     try:
