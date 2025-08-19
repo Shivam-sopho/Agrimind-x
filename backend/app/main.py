@@ -34,6 +34,7 @@ async def chat_websocket(websocket: WebSocket):
                 audio_data = base64.b64decode(msg['audio'])
                 with open('received_audio.wav', 'wb') as f:
                     f.write(audio_data)
+                print("Audio received and saved as received_audio.wav")
                 await websocket.send_text("Audio received!")
             elif 'text' in msg:
                 # Call LLM for text messages
