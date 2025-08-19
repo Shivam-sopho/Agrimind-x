@@ -134,7 +134,7 @@ export default function AgriChatScreen({ onClose }: { onClose?: () => void }) {
         type: 'audio/m4a',
       } as any);
       try {
-        const response = await fetch('http://192.168.1.5:8000/infer/chat', {
+        const response = await fetch('https://agrimind-x.onrender.com/infer/chat', {
           method: 'POST',
           body: formData,
           headers: {
